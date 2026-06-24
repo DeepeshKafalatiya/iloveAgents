@@ -17,6 +17,7 @@
 </div>
 
 ---
+
 ## Table of Contents
 
 - [What is iloveAgents?](#what-is-iloveagents)
@@ -70,11 +71,11 @@ The complete list of agents has been moved to [AGENTS.md](./AGENTS.md) for bette
 
 ## Supported Providers
 
-| Provider | Logo | Models | Get Your Key |
-|----------|------|--------|--------------|
-| OpenAI | <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" width="80"/> | GPT-4o, GPT-4o-mini | [platform.openai.com](https://platform.openai.com/api-keys) |
-| Anthropic | <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" width="80"/> | Claude Opus, Claude Sonnet | [console.anthropic.com](https://console.anthropic.com/) |
-| Google Gemini | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" width="80"/> | Gemini 2.5 Flash | [aistudio.google.com](https://aistudio.google.com/apikey) |
+| Provider      | Logo                                                                                               | Models                     | Get Your Key                                                |
+| ------------- | -------------------------------------------------------------------------------------------------- | -------------------------- | ----------------------------------------------------------- |
+| OpenAI        | <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" width="80"/>        | GPT-4o, GPT-4o-mini        | [platform.openai.com](https://platform.openai.com/api-keys) |
+| Anthropic     | <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Anthropic_logo.svg" width="80"/>     | Claude Opus, Claude Sonnet | [console.anthropic.com](https://console.anthropic.com/)     |
+| Google Gemini | <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" width="80"/> | Gemini 2.5 Flash           | [aistudio.google.com](https://aistudio.google.com/apikey)   |
 
 You can switch providers on any agent at runtime from the dropdown. No restart needed.
 
@@ -93,7 +94,7 @@ Battle Mode has its own dark, dramatic UI with color-coded provider columns (gol
 
 ---
 
-## 🔗 AI Workflow Builder  *(New)*
+## 🔗 AI Workflow Builder _(New)_
 
 > **Chain multiple agents together and automate your entire process in one run.**
 
@@ -136,12 +137,12 @@ If any step fails, the workflow stops at that step and shows you exactly what we
 
 ### Navigation
 
-| Route | What it does |
-|---|---|
-| `/workflows` | Browse community workflow library |
-| `/workflows/build` | Create and save a new workflow |
-| `/workflows/:id` | View full details of a workflow |
-| `/workflows/:id/run` | Run a workflow step-by-step |
+| Route                | What it does                      |
+| -------------------- | --------------------------------- |
+| `/workflows`         | Browse community workflow library |
+| `/workflows/build`   | Create and save a new workflow    |
+| `/workflows/:id`     | View full details of a workflow   |
+| `/workflows/:id/run` | Run a workflow step-by-step       |
 
 ---
 
@@ -167,10 +168,10 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
-No API provider keys are required in a `.env` file because 
+No API provider keys are required in a `.env` file because
 they are entered at runtime and never stored anywhere.
 
-However, local development requires a `.env.local` file 
+However, local development requires a `.env.local` file
 for Supabase features like Workflows.
 
 Create a `.env.local` file in the root directory:
@@ -180,9 +181,8 @@ VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Note: AI provider API keys are still entered at runtime 
+Note: AI provider API keys are still entered at runtime
 and are never stored anywhere.
-
 
 ### Deploy Your Own
 
@@ -254,26 +254,26 @@ iloveAgents is built by the community. Every contribution matters — whether it
 
 ```js
 export default {
-  id: 'your-agent-id',
-  name: 'Your Agent Name',
-  description: 'One-line description.',
-  category: 'Category',
-  icon: 'IconName',               // from lucide.dev/icons
-  provider: 'any',                // 'openai' | 'anthropic' | 'gemini' | 'any'
-  defaultProvider: 'openai',
-  model: 'gpt-4o',
+  id: "your-agent-id",
+  name: "Your Agent Name",
+  description: "One-line description.",
+  category: "Category",
+  icon: "IconName", // from lucide.dev/icons
+  provider: "any", // 'openai' | 'anthropic' | 'gemini' | 'any'
+  defaultProvider: "openai",
+  model: "gpt-4o",
   inputs: [
     {
-      id: 'field_id',
-      label: 'Field Label',
-      type: 'textarea',           // text | textarea | code | select | multiselect
-      placeholder: 'Hint text...',
+      id: "field_id",
+      label: "Field Label",
+      type: "textarea", // text | textarea | code | select | multiselect
+      placeholder: "Hint text...",
       required: true,
     },
   ],
   systemPrompt: `Your system prompt here.`,
-  outputType: 'markdown',         // markdown | text | json
-}
+  outputType: "markdown", // markdown | text | json
+};
 ```
 
 The registry auto-collects it — no need to edit `registry.js`.
@@ -296,15 +296,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
 ## Tech Stack
 
-| Technology | Purpose |
-|-----------|---------|
-| [React 18](https://react.dev) | Component framework |
-| [Vite 6](https://vitejs.dev) | Build tool and dev server |
-| [Tailwind CSS 3](https://tailwindcss.com) | Styling |
-| [React Router 6](https://reactrouter.com) | Client-side routing |
-| [Lucide React](https://lucide.dev) | Icons |
-| [react-markdown](https://github.com/remarkjs/react-markdown) | Markdown rendering |
-| [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) | Code highlighting |
+| Technology                                                                                       | Purpose                   |
+| ------------------------------------------------------------------------------------------------ | ------------------------- |
+| [React 18](https://react.dev)                                                                    | Component framework       |
+| [Vite 6](https://vitejs.dev)                                                                     | Build tool and dev server |
+| [Tailwind CSS 3](https://tailwindcss.com)                                                        | Styling                   |
+| [React Router 6](https://reactrouter.com)                                                        | Client-side routing       |
+| [Lucide React](https://lucide.dev)                                                               | Icons                     |
+| [react-markdown](https://github.com/remarkjs/react-markdown)                                     | Markdown rendering        |
+| [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) | Code highlighting         |
 
 ---
 
